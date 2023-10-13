@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <title>API Example with Bootstrap</title>
+  </head>
+  <body>
+    <header>
+      <a href="Home.html" class="btn btn-primary" id="homeLink">Home</a>
+    </header>
+    <main>
+      <div class="container mt-5">
+        <h1 class="mb-4">Inserisci un nuovo prodotto</h1>
+
+        <form id="productForm">
+          <div class="form-group">
+            <label for="name">Nome</label>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              placeholder="Inserisci il nome"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="description">Descrizione</label>
+            <input
+              type="text"
+              class="form-control"
+              id="description"
+              placeholder="Inserisci la descrizione"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="brand">Brand</label>
+            <input
+              type="text"
+              class="form-control"
+              id="brand"
+              placeholder="Inserisci il brand"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="imageUrl">URL dell'immagine</label>
+            <input
+              type="url"
+              class="form-control"
+              id="imageUrl"
+              placeholder="Inserisci l'URL dell'immagine"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="price">Prezzo</label>
+            <input
+              type="number"
+              step="0.01"
+              class="form-control"
+              id="price"
+              placeholder="Inserisci il prezzo"
+              required
+            />
+          </div>
+
+          <button type="submit" class="btn btn-primary">
+            Salva nel pacchetto API
+          </button>
+        </form>
+
+        <div id="productSection" class="mt-5">
+          <h2>Prodotti aggiunti:</h2>
+          <p>Clicca per visualizzare</p>
+
+          <div id="productCards" class="row"></div>
+        </div>
+      </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="back-office.js"></script>
+  </body>
+</html>
